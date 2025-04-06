@@ -9,7 +9,4 @@ Este proyecto es un ejemplo simple del uso de la librería [`rich`](https://gith
 - Python 3.7 o superior  
 - Librería `rich`
 
-Puedes instalar `rich` ejecutando:
 
-```bash
-pip install rich
