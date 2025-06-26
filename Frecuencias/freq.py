@@ -128,7 +128,20 @@ calcular_percentil(20, "Percentil 20 (P20)")
 calcular_percentil(50, "Cuartil 2 (Q2)")
 calcular_percentil(40, "Quintil 2 (K2)")
 calcular_percentil(20, "Decil 2 (D2)")
+# 20. Boxplot
+plt.figure(figsize=(8, 5))
+plt.boxplot(datos, vert=False, patch_artist=True,
+            boxprops=dict(facecolor='lightblue', color='black'),
+            medianprops=dict(color='red'),
+            whiskerprops=dict(color='black'),
+            capprops=dict(color='black'),
+            flierprops=dict(markerfacecolor='orange', marker='o', markersize=6))
 
+plt.title('Diagrama de Caja (Boxplot)')
+plt.xlabel('Valor')
+plt.grid(True, axis='x')
+plt.tight_layout()
+plt.show()
 # Añadir etiquetas sobre cada barra
 for i in range(len(patches)):
     plt.text(patches[i].get_x() + patches[i].get_width()/2, conteo[i] + 0.5,
